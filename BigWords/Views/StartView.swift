@@ -13,6 +13,8 @@ struct StartView: View {
     @State var player1 = ""
     @State var player2 = ""
 
+    @State var isShowedGame = false
+
     var body: some View {
 
         VStack {
@@ -31,7 +33,7 @@ struct StartView: View {
                 .padding(.horizontal, 20)
 
             Button {
-                print("Start Button Tapped")
+                isShowedGame.toggle()
             } label: {
                 Text("Старт")
                     .padding()
@@ -41,6 +43,9 @@ struct StartView: View {
                     .foregroundColor(.white)
                     .cornerRadius(100)
                     .padding(.top)
+            }
+            .fullScreenCover(isPresented: $isShowedGame) {
+                GameView()
             }
         }
     }

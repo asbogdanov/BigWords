@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		0A94EF13285CB37500D9F404 /* BigWordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EF12285CB37500D9F404 /* BigWordsApp.swift */; };
-		0A94EF15285CB37500D9F404 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EF14285CB37500D9F404 /* ContentView.swift */; };
+		0A94EF15285CB37500D9F404 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EF14285CB37500D9F404 /* StartView.swift */; };
 		0A94EF17285CB37800D9F404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A94EF16285CB37800D9F404 /* Assets.xcassets */; };
 		0A94EF1A285CB37800D9F404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A94EF19285CB37800D9F404 /* Preview Assets.xcassets */; };
+		0A94EF22285CBFF600D9F404 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EF21285CBFF600D9F404 /* TitleText.swift */; };
+		0A94EF24285CC0C500D9F404 /* WordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EF23285CC0C500D9F404 /* WordTextField.swift */; };
+		0A94EF26285CC26700D9F404 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A94EF25285CC26700D9F404 /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A94EF0F285CB37500D9F404 /* BigWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A94EF12285CB37500D9F404 /* BigWordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigWordsApp.swift; sourceTree = "<group>"; };
-		0A94EF14285CB37500D9F404 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0A94EF14285CB37500D9F404 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		0A94EF16285CB37800D9F404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A94EF19285CB37800D9F404 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A94EF21285CBFF600D9F404 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
+		0A94EF23285CC0C500D9F404 /* WordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTextField.swift; sourceTree = "<group>"; };
+		0A94EF25285CC26700D9F404 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,8 @@
 			isa = PBXGroup;
 			children = (
 				0A94EF12285CB37500D9F404 /* BigWordsApp.swift */,
-				0A94EF14285CB37500D9F404 /* ContentView.swift */,
+				0A94EF27285CC27C00D9F404 /* Views */,
+				0A94EF20285CBFDE00D9F404 /* Components */,
 				0A94EF16285CB37800D9F404 /* Assets.xcassets */,
 				0A94EF18285CB37800D9F404 /* Preview Content */,
 			);
@@ -65,6 +72,24 @@
 				0A94EF19285CB37800D9F404 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0A94EF20285CBFDE00D9F404 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0A94EF21285CBFF600D9F404 /* TitleText.swift */,
+				0A94EF23285CC0C500D9F404 /* WordTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0A94EF27285CC27C00D9F404 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A94EF14285CB37500D9F404 /* StartView.swift */,
+				0A94EF25285CC26700D9F404 /* GameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A94EF15285CB37500D9F404 /* ContentView.swift in Sources */,
+				0A94EF15285CB37500D9F404 /* StartView.swift in Sources */,
+				0A94EF22285CBFF600D9F404 /* TitleText.swift in Sources */,
 				0A94EF13285CB37500D9F404 /* BigWordsApp.swift in Sources */,
+				0A94EF24285CC0C500D9F404 /* WordTextField.swift in Sources */,
+				0A94EF26285CC26700D9F404 /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +301,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -284,7 +314,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,6 +332,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,7 +345,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

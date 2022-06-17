@@ -11,7 +11,7 @@ import SwiftUI
 struct BigWordsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
         }
     }
 }

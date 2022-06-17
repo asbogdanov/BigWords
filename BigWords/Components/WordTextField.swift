@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct WordTextField: View {
+
+    @State var word: Binding<String>
+    var placeholder: String
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TextField(placeholder, text: word)
+            .font(.title2)
+            .padding()
+            .background(Color("FirstPlayer"))
+            .cornerRadius(12)
     }
 }
 
-struct WordTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        WordTextField()
-    }
-}

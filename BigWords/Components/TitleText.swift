@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct TitleText: View {
+
+    @State var text: String
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+        Text(text)
+            .padding()
+            .font(.custom("AvenirNext-Bold", size: 42))
+            .frame(maxWidth: .infinity)
+            .background(Color("FirstPlayer"))
+            .foregroundColor(.white)
     }
 }
 
 struct TitleText_Previews: PreviewProvider {
     static var previews: some View {
-        TitleText()
+        TitleText(text: "Магнитотерапия")
     }
 }
